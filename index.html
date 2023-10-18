@@ -5,44 +5,44 @@
 <link rel="icon" href="favicon.ico">
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" /
-<meta name="description" content="Eaglercraftは無料で本物のMinecraft Java版の1.5.2をプレイできます。U5KUNによって日本語化され、日本の方でも手軽にプレイできるようになりました。学校のchromebookも含む、全てのクロームブックやブラウザでプレイ可能です。拡張機能は必要ありません。シングルプレイ、マルチプレイ両方ともサポートされています。" />
-<meta name="keywords" content="minecraft, eaglercraft, singleplayer, applet, replit, browser, html5, javascript, chromebook, lax1dude, games, eagler, japanese, マイクラ, 日本語, クロームブック, 学校, イーグル, クラフト, イーグルクラフト, マインクラフト, ブラウザ, HTML, web, ウェブ, オンライン, Java Edition, ダウンロード不要, Unblocked games, 1.5.2, サーバー, マルチプレイ、 本物, 無料, シングルプレイ" />
+<meta name="description" content="Eaglercraft allows you to play the real Minecraft Java version 1.5.2 for free. It has been translated into Japanese by U5KUN so that even Japanese people can easily play it. School Playable on all Chromebooks and browsers, including Chromebooks. No extensions required. Both single-player and multiplayer supported." />
+<meta name="keywords" content="minecraft, eaglercraft, singleplayer, applet, replit, browser, html5, javascript, chromebook, lax1dude, games, eagler, japanese, minecraft, japanese, chromebook, school, eagle, craft, EagleCraft, Minecraft, Browser, HTML, web, Web, Online, Java Edition, No Download, Unblocked games, 1.5.2, Server, Multiplayer, Authentic, Free, Singleplayer" />
 <meta name="author" content="lax1dude" />
 <meta property="og:title" content="Eaglercraft" />
 <meta property="og:locale" content="en-US" />
 <meta property="og:type" content="website" />
 <!-- Change this: <meta property="og:image" content="https://media.discordapp.net/attachments/378764518081429506/932053915061587978/thumbnail2.png" /> -->
-<meta property="og:description" content="Eaglercraftは無料で本物のMinecraft Java版の1.5.2をプレイできます。U5KUNによって日本語化され、日本の方でも手軽にプレイできるようになりました。学校のchromebookも含む、全てのクロームブックやブラウザでプレイ可能です。拡張機能は必要ありません。シングルプレイ、マルチプレイ両方ともサポートされています。" />
+<meta property="og:description" content="Eaglercraft allows you to play the real Minecraft Java version 1.5.2 for free. It was translated into Japanese by U5KUN, so even Japanese people can easily play it. .Playable on all Chromebooks and browsers, including school chromebooks. No extensions required. Both single-player and multiplayer supported." />
 <!-- Change this: <meta property="og:url" content="https://g.eags.us/eaglercraft/" /> -->
 <script type="text/javascript" src="classes.js"></script>
 <script type="text/javascript" src="eagswebrtc.js"></script>
 <script type="text/javascript">
 if(document.location.href.startsWith("file:")) {
-alert("このHTMLファイルはブラウザで直接'開く'ことはできません。あなたのHTTPサーバーにアップロードしてアクセスしてプレイできます。バグではありません。付属のドキュメントを参照してください。");
+alert("This HTML file cannot be 'opened' directly in a browser. It can be uploaded to your HTTP server and accessed and played. This is not a bug. Please refer to the accompanying documentation.");
 }else {
 window.addEventListener("load", function(){
 const relayId = Math.floor(Math.random() * 3);
-window.eaglercraftOpts = {
+window.eaglecraftOpts = {
 container: "game_frame", assetsURI: "assets.epk", serverWorkerURI: "worker_bootstrap.js", worldsFolder: "MAIN",
 servers: [
-	{ serverName: "A*spixel(Hypixelにそっくり)", serverAddress: "wss://web.asspixel.net/CAPixel/", hideAddress: false },
-	{ serverName: "Aeon(The Pitがあるよ!)", serverAddress: "wss://aeon.megatkc.repl.co/", hideAddress: false }
+{ serverName: "A*spixel (looks like Hypixel)", serverAddress: "wss://web.asspixel.net/CAPixel/", hideAddress: false },
+{ serverName: "Aeon(The Pit is here!)", serverAddress: "wss://aeon.megatkc.repl.co/", hideAddress: false }
 ],
 relays: [
-	{ addr: "wss://relay.deev.is/", name: "lax1dude relay #1", primary: relayId == 0 },
-	{ addr: "wss://relay.lax1dude.net/", name: "lax1dude relay #2", primary: relayId == 1 },
-	{ addr: "wss://relay.shhnowisnottheti.me/", name: "ayunami relay #1", primary: relayId == 2 }
+{ addr: "wss://relay.deev.is/", name: "lax1dude relay #1", primary: relayId == 0 },
+{ addr: "wss://relay.lax1dude.net/", name: "lax1dude relay #2", primary: relayId == 1 },
+{ addr: "wss://relay.shhnowisnottheti.me/", name: "ayunami relay #1", primary: relayId == 2 }
 ],
 mainMenu: { splashes: [
 "Translated by U5KUN!!",
-"U5KUNが翻訳!!"
+"Translated by U5KUN!!"
 ], eaglerLogo: true }};
 (function(){
 var q = window.location.search;
 if(typeof q === 'string' && q.startsWith("?")) {
-	q = new URLSearchParams(q);
-	var s = q.get("server");
-	if(s) window.minecraftOpts.push(s);
+q = new URLSearchParams(q);
+var s = q.get("server");
+if(s) window.minecraftOpts.push(s);
 }
 })();
 main();
